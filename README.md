@@ -210,10 +210,3 @@ This project was developed to strengthen understanding of:
 * Memory management in modern C++
 * Modular software architecture
 
----
-
-## Author
-
-Swastik Bhardwaj
-
-Developed as an Object-Oriented Programming project in C++.

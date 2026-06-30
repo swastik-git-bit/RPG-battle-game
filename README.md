@@ -4,15 +4,16 @@ A text-based RPG built incrementally in C++ using Object-Oriented Programming,
 following a 20-phase roadmap: character system → combat → equipment → inventory →
 skills → loot → shops → quests → exploration → save/load → bosses → polish.
 
+## Current Status: Phases 1-3 Complete ✅
 
-- **Core Structure**: project layout (`include/` + `src/`), a `Game` class
+- **Phase 1 — Core Structure**: project layout (`include/` + `src/`), a `Game` class
   that owns all flow, a clean `main()` that only initializes and starts the game, and
   a basic menu-driven game loop.
-- **Character System**: abstract `Character` base class with the shared
+- **Phase 2 — Character System**: abstract `Character` base class with the shared
   attributes (Name, Health, Max Health, Attack Power, Defense, Level, Experience, Gold)
   and shared methods (`Attack`, `TakeDamage`, `Heal`, `DisplayStats`, `LevelUp`,
   `GainExperience`, `IsAlive`).
-- **Player Classes**: `Warrior`, `Mage`, and `Archer`, each with different
+- **Phase 3 — Player Classes**: `Warrior`, `Mage`, and `Archer`, each with different
   base stats, an overridden `Attack()`, and a unique ability (Power Strike / Fireball /
   Rapid Shot) showing distinct playstyles.
 
@@ -59,6 +60,11 @@ remove build artifacts.
   retrofitting smart pointers later, per the project's final-phase requirement to avoid
   raw owning pointers.
 
+## Roadmap (next up)
+
+**Phase 4 — Enemy System** is next: an `Enemy` base class plus Goblin/Skeleton/Orc/
+Dragon/Boss types with level-based scaling, followed immediately by **Phase 5 — Battle
+System** so the Training Grounds can be replaced with real turn-based encounters.
 
 ## Known simplifications (intentionally deferred, not bugs)
 

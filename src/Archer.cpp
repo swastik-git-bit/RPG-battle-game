@@ -4,7 +4,7 @@
 #include <cstdlib>
 
 Archer::Archer(const std::string& charName)
-    : Character(charName, /*startHealth=*/95, /*startAttack=*/20, /*startDefense=*/8),
+    : Character(charName, 95, 20, 8),
       critChance(20) {}
 
 int Archer::Attack(Character& target) {

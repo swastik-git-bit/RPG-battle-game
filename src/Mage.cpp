@@ -20,13 +20,13 @@ int Mage::Attack(Character& target) {
     mana -= manaCost;
     int variance = (rand() % 7) - 3;
     int rawDamage = GetAttackPower() + variance;
-    int finalDamage = std::max(1, rawDamage - target.GetDefense() / 4);  // armor barely helps vs magic
+    int finalDamage = std::max(1, rawDamage - target.GetDefense() / 4); 
 
     std::cout << GetName() << " hurls a Magic Bolt at " << target.GetName()
               << " for " << finalDamage << " damage! (-" << manaCost << " mana)\n";
     target.TakeDamage(finalDamage);
 
-    mana = std::min(maxMana, mana + 3);  // small regen to keep the resource usable
+    mana = std::min(maxMana, mana + 3);
     return finalDamage;
 }
 

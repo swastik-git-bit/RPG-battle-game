@@ -5,11 +5,11 @@
 #include <cstdlib>
 
 Warrior::Warrior(const std::string& charName)
-    : Character(charName, /*startHealth=*/120, /*startAttack=*/18, /*startDefense=*/12),
+    : Character(charName, 120, 18, 12),
       abilityCooldown(0) {}
 
 int Warrior::Attack(Character& target) {
-    int variance = (rand() % 5) - 2;  // -2..+2
+    int variance = (rand() % 5) - 2;
     int rawDamage = GetAttackPower() + variance;
     int finalDamage = std::max(1, rawDamage - target.GetDefense() / 2);
 

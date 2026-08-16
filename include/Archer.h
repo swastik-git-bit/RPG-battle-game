@@ -4,10 +4,9 @@
 #include <string>
 #include "Character.h"
 
-// Balanced ranged fighter: moderate stats with a strong critical-hit chance.
 class Archer : public Character {
 private:
-    int critChance;  // percent chance (0-100) for a critical hit
+    int critChance;
 
 public:
     explicit Archer(const std::string& charName);
@@ -18,4 +17,4 @@ public:
     void DisplayStats() const override;
 };
 
-#endif // ARCHER_H
+#endif

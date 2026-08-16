@@ -2,10 +2,16 @@
 #include <iostream>
 
 Character::Character(const std::string& charName, int startHealth, int startAttack,
-                      int startDefense, int startLevel)
-    : name(charName), health(startHealth), maxHealth(startHealth),
-      attackPower(startAttack), defense(startDefense), level(startLevel),
-      experience(0), gold(0) {}
+                      int startDefense, int startLevel){
+    name = charName;
+    health = starHealth;
+    maxHealth = startHealth;
+    attackPower = startAttack;
+    defense = startDefense;
+    level = startLevel;
+    experience = 0;
+    gold = 0;
+}
 
 int Character::ExperienceToNextLevel() const {
     return level * 100;

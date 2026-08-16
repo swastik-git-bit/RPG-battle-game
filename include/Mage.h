@@ -4,7 +4,6 @@
 #include <string>
 #include "Character.h"
 
-// Fragile glass cannon: low HP/defense, powerful spells fueled by mana.
 class Mage : public Character {
 private:
     int mana;
@@ -17,10 +16,10 @@ public:
     void UseAbility(Character& target) override;
     std::string GetClassName() const override;
     void DisplayStats() const override;
-    void LevelUp() override;  // also grows max mana
+    void LevelUp() override;
 
     int GetMana() const { return mana; }
     int GetMaxMana() const { return maxMana; }
 };
 
-#endif // MAGE_H
+#endif

@@ -4,7 +4,7 @@
 #include <cstdlib>
 
 Mage::Mage(const std::string& charName)
-    : Character(charName, /*startHealth=*/80, /*startAttack=*/24, /*startDefense=*/6),
+    : Character(charName, 80, 24, 6),
       mana(60), maxMana(60) {}
 
 int Mage::Attack(Character& target) {
